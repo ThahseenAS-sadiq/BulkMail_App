@@ -1,4 +1,4 @@
- const express = require("express");
+const express = require("express");
 const cors = require("cors");
 // Install nodemailer package before running this code: npm install nodemailer
 const nodemailer = require("nodemailer");
