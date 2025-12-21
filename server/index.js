@@ -17,6 +17,9 @@ mongoose.connect("mongodb+srv://thahseen:12345@cluster0.vkw0tt7.mongodb.net/pass
 
 const credentials = mongoose.model("credentials", {}, "bulkmail");
 
+app.get("/", (req, res) => {
+  res.send("BulkMail Server Running");
+});
 
 app.post("/sendemail", (req, res) => {
     var msg = req.body?.msg;
