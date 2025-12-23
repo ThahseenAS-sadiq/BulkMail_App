@@ -76,7 +76,7 @@ function App() {
 
   function send() {
     setStatus(true);
-    axios.post("https://bulkmail-app-k1nz.onrender.com/sendemail", { msg: msg, emailList: emailList, subject: subject })
+    axios.post("http://localhost:5000/sendemail", { msg: msg, emailList: emailList, subject: subject })
       .then(function (data) {
         if (data.data === true) {
           setSendHistory([...sendHistory, { subject, count: emailList.length, date: new Date().toLocaleString() }]);
